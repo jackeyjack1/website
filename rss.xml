@@ -1,0 +1,47 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Ratakor's blog</title>
+        <link>https://ratakor.com/</link>
+        <description>ratakor.com blog</description>
+        <atom:link href="https://ratakor.com/rss.xml" rel="self" type="application/rss+xml"/>
+
+        <item>
+            <title>Discord</title>
+            <guid>https://ratakor.com/blog/Discord</guid>
+            <pubDate>Wed, 22 Feb 2023 23:39:51 +0100</pubDate>
+            <description><![CDATA[
+                <p>OK so first I use discord only from the browser (Ungoogled Chromium) because it helps at mitigating all the spyware and it should enheance its performance BUT discord is sooo bloated, soo full of javascript and malicious stuff that it still burn my cpu if I start to mess up with some graphic settings. Now the second part, the spyware issue, I think discord is one of the most harmful amongst all other spyware software because even privacy focused people are using it, and also because computer science university tend to only work with discord (and mail of couse :P) because tHaThS wHAt StuDenTs uSE. Well actually that's a positive/negative point because <i>everyone</i> are on discord so it's pretty easy to find interesting people, BUT AT WHAT COST. <br/> tldr: discord is super bloated and spies on you, but there are good community on it</p>
+            ]]></description>
+        </item>
+
+        <item>
+            <title>Why mpv is sooo cool</title>
+            <guid>https://ratakor.com/blog/Why%20mpv%20is%20sooo%20cool</guid>
+            <pubDate>Fri, 17 Feb 2023 01:01:54 +0100</pubDate>
+            <description><![CDATA[
+                <p>mpv is the best video player</p>
+            ]]></description>
+        </item>
+
+        <item>
+            <title>Changelog 14 Feb 2023</title>
+            <guid>https://ratakor.com</guid>
+            <pubDate>Tue, 14 Feb 2023 22:01:50 +0100</pubDate>
+            <description><![CDATA[
+                - remove old rss content, mostly changelog
+            <br/>
+                - change this feed from a changelog to a blogpost
+            ]]></description>
+        </item>
+
+        <item>
+            <title>SUPER TITLE FOR MY NEW BLOG</title>
+            <guid>https://ratakor.com/blog/SUPER%20TITLE%20FOR%20MY%20NEW%20BLOG</guid>
+            <pubDate>Tue, 14 Feb 2023 18:25:30 +0100</pubDate>
+            <description><![CDATA[
+                <p>A NEW BLOG HAS OPENED</p>
+            ]]></description>
+        </item>
+
+    </channel>
+</rss>

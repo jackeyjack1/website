@@ -1,0 +1,51 @@
+#!/bin/sh
+# Create a simple HTML template for me to easily type a blog post into,
+# without having to worry about formatting or anything.
+set -e
+URL="https://ratakor.com/blog"
+
+read -r "Title: " TITLE
+read -r "Description: " DESCRIPTION
+
+printf \
+"<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+  <title>$TITLE</title>
+  <meta content=\"text/html; charset=utf-8\" http-equiv=\"content-type\" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
+  <meta name=\"description\" content=\"$DESCRIPTION\" />
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"../styles.css\" />
+</head>
+<body>
+  <div class=\"content\">
+    <h1>$TITLE</h1>
+    <i>$DESCRIPTION</i>
+    <date>$(date '+%d %b %Y')</date>
+    <br/><br/>
+    <p>\n" > "$TITLE.html"
+
+:>content
+$EDITOR content.html
+CONTENT="$(cat content)"
+rm content.html
+printf "$CONTENT" >> "$TITLE.html"
+
+printf "
+    </p>
+    <br/>
+    <div class=\"footer\">
+      <a href=\"../blog.html\">&lt; BACK TO THE BLOG PAGE &gt;</a>
+    </div>
+  </div>
+</body>
+</html>" >> "$TITLE.html"
+
+POST="\\\n        <item>\n            <title>$TITLE</title>\n            <guid>$URL/$(printf "$TITLE" | sed 's/ /%20/g')</guid>\n            <pubDate>$(date -R)</pubDate>\n            <description><![CDATA[\n                <p>$(printf "$CONTENT" | tr '\n' ' ')</p>\n            ]]></description>\n        </item>"
+
+sed "/\<atom:.*/a $POST" ../rss.xml > rss.new
+mv rss.new ../rss.xml
+
+MAINPAGE="\\\n    <a href=\"blog/$TITLE.html\" class=\"widget\">\n      <span>$TITLE</span>\n    </a>"
+sed "/container\">/a $MAINPAGE" ../blog.html > newblog.html # I need to fix this
+mv newblog.html ../blog.html
