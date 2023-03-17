@@ -132,9 +132,16 @@ button {
 	}
 }
 
+.webring {
+	padding-left: 5% ;
+	padding-right: 5% ;
+
+}
+
 .webring img {
 	width: 88px;
 	height: 31px;
+	padding: 0px 1px 10px 1px;
 }
 
 h1 ,
