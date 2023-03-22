@@ -109,26 +109,22 @@ button {
 	10% {
 		opacity: 1;
 		left: 0px;
-		transform: scale(1);
-		transform: skew(0);
+		transform: scale(1) skew(0);
 	}
 	12% {
 		opacity: 0.8;
 		left: -100px;
-		transform: scaleY(1.2);
-		transform: skew(50deg);
+		transform: scaleY(1.2) skew (50deg);
 	}
 	15% {
 		opacity: 0.2;
 		left: 100px;
-		transform: scaleY(1.2);
-		transform: skew(-70deg);
+		transform: scaleY(1.2) skew(-70deg);
 	}
 	17% {
 		opacity: 1;
 		left: 0px;
-		transform: scale(1);
-		transform: skew(0);
+		transform: scale(1) skew(0);
 	}
 }
 
